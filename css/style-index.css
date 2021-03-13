@@ -130,6 +130,9 @@ body .wrapper .container header .first-screen .first-screen__content .first-scre
   padding: 23px 30px 20px 30px;
   letter-spacing: 1px;
 }
+body .wrapper .container header .first-screen .first-screen__content .first-screen__search form input[type=submit]:hover {
+  cursor: pointer;
+}
 body .wrapper .container header .first-screen .first-screen__content .first-screen__scroll-down .scroll-down__text {
   font-family: "Josefin Sans", sans-serif;
   font-size: 14px;
@@ -218,9 +221,10 @@ body .wrapper .container main .why-choose-us .why-choose-us__content .why-choose
   justify-content: space-between;
   align-items: center;
   min-height: 500px;
+  gap: 60px;
 }
 body .wrapper .container main .why-choose-us .why-choose-us__content .why-choose-us__container .why-choose-us__container__text-container {
-  flex: 0 0 540px;
+  flex: 1 1 40%;
 }
 body .wrapper .container main .why-choose-us .why-choose-us__content .why-choose-us__container .why-choose-us__container__text-container .why-choose-us__container__text-container__headline {
   font-size: 36px;
@@ -256,19 +260,40 @@ body .wrapper .container main .why-choose-us .why-choose-us__content .why-choose
 body .wrapper .container main .why-choose-us .why-choose-us__content .why-choose-us__container .why-choose-us__container__image-container {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: flex-end;
+  justify-content: space-between;
+  gap: 10px;
   align-items: center;
-  min-width: 540px;
-  height: 450px;
+  flex-wrap: wrap;
+  flex: 1 0 40%;
 }
-body .wrapper .container main .why-choose-us .why-choose-us__content .why-choose-us__container .why-choose-us__container__image-container div .image-one {
-  align-self: flex-start;
-  flex: 0 0 350px;
+body .wrapper .container main .why-choose-us .why-choose-us__content .why-choose-us__container .why-choose-us__container__image-container .row-one {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex: 1 1 100%;
+}
+body .wrapper .container main .why-choose-us .why-choose-us__content .why-choose-us__container .why-choose-us__container__image-container .row-one .image-one {
+  display: flex;
+  background-image: url("../img/why-choose-us-image-one.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  flex: 0 0 70%;
   height: 220px;
 }
-body .wrapper .container main .why-choose-us .why-choose-us__content .why-choose-us__container .why-choose-us__container__image-container div .image-two {
-  flex: 0 0 350px;
+body .wrapper .container main .why-choose-us .why-choose-us__content .why-choose-us__container .why-choose-us__container__image-container .row-two {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  flex: 1 1 100%;
+}
+body .wrapper .container main .why-choose-us .why-choose-us__content .why-choose-us__container .why-choose-us__container__image-container .row-two .image-two {
+  display: flex;
+  background-image: url("../img/why-choose-us-image-two.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  flex: 0 0 70%;
   height: 220px;
 }
 body .wrapper .container main .how-it-works {
@@ -591,14 +616,13 @@ body .wrapper .container footer .footer-container .footer-container__block .foot
     min-height: 420px;
   }
   body .wrapper .container main .why-choose-us .why-choose-us__content .why-choose-us__container {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-items: center;
+    display: block;
     text-align: center;
+    margin: 0 auto;
   }
   body .wrapper .container main .why-choose-us .why-choose-us__content .why-choose-us__container .why-choose-us__container__text-container {
-    flex: 0 0 300px;
+    display: block;
+    max-width: 100%;
   }
   body .wrapper .container main .why-choose-us .why-choose-us__content .why-choose-us__container .why-choose-us__container__text-container .why-choose-us__container__text-container__headline {
     font-size: 36px;
@@ -633,22 +657,32 @@ body .wrapper .container footer .footer-container .footer-container__block .foot
     text-transform: uppercase;
   }
   body .wrapper .container main .why-choose-us .why-choose-us__content .why-choose-us__container .why-choose-us__container__image-container {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    min-width: 300px;
-    height: 450px;
+    display: block;
+    max-width: 100%;
   }
-  body .wrapper .container main .why-choose-us .why-choose-us__content .why-choose-us__container .why-choose-us__container__image-container div .image-one {
-    align-self: flex-start;
-    flex: 0 0 300px;
-    height: auto;
+  body .wrapper .container main .why-choose-us .why-choose-us__content .why-choose-us__container .why-choose-us__container__image-container .row-one {
+    display: block;
   }
-  body .wrapper .container main .why-choose-us .why-choose-us__content .why-choose-us__container .why-choose-us__container__image-container div .image-two {
-    flex: 0 0 300px;
-    height: auto;
+  body .wrapper .container main .why-choose-us .why-choose-us__content .why-choose-us__container .why-choose-us__container__image-container .row-one .image-one {
+    background-image: url("../img/why-choose-us-image-one.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    max-width: 350px;
+    height: 220px;
+    margin: 0 auto 10px auto;
+  }
+  body .wrapper .container main .why-choose-us .why-choose-us__content .why-choose-us__container .why-choose-us__container__image-container .row-two {
+    display: block;
+  }
+  body .wrapper .container main .why-choose-us .why-choose-us__content .why-choose-us__container .why-choose-us__container__image-container .row-two .image-two {
+    background-image: url("../img/why-choose-us-image-two.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    max-width: 350px;
+    height: 220px;
+    margin: 0 auto;
   }
   body .wrapper .container main .how-it-works {
     background-color: #333333;

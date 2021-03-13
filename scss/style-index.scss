@@ -147,6 +147,9 @@ body {
                                     padding: 23px 30px 20px 30px;
                                     letter-spacing: 1px;
                                 }
+                                input[type=submit]:hover {
+                                    cursor: pointer;
+                                }
                             }
     
                         }
@@ -273,9 +276,10 @@ body {
                             justify-content: space-between;
                             align-items: center;
                             min-height: 500px;
+                            gap: 60px;
 
                             .why-choose-us__container__text-container {
-                                flex: 0 0 540px;
+                                flex: 1 1 40%;
     
                                 .why-choose-us__container__text-container__headline {
                                     font-size: 36px;
@@ -315,61 +319,47 @@ body {
                                     }
                                 }
                             }
-    
-                            // .why-choose-us__container__image-container {
-                            //     display: block;
-                            //     min-width: 540px;
-                            //     height: 450px;          
-                                
-                            //     div {
-
-                            //         .image-one {
-
-                            //             img {
-                            //                 display: block;
-                            //                 position: relative;
-                            //                 left: 0;
-                            //                 top: 0;
-                            //                 height: 220px; 
-                            //             }
-                                                             
-                            //         }
-    
-                            //         .image-two {
-
-                            //             img {
-                            //                 display: block;
-                            //                 position: relative;
-                            //                 right: 0;
-                            //                 bottom: 0;
-                            //                 height: 220px; 
-                            //             }
-                                        
-                            //         }
-                            //     }                              
-                             
-                            // }
 
                             .why-choose-us__container__image-container {
                                 display: flex;
                                 flex-direction: row;
-                                flex-wrap: wrap;
-                                justify-content: flex-end;
+                                justify-content: space-between;
+                                gap: 10px;
                                 align-items: center;
-                                min-width: 540px;
-                                height: 450px;
+                                flex-wrap: wrap;
+                                flex: 1 0 40%;
 
-                                div {
+                                .row-one {
+                                    display: flex;
+                                    flex-direction: row;
+                                    justify-content: flex-start;
+                                    flex: 1 1 100%;
 
                                     .image-one {
-                                        align-self: flex-start;
-                                        flex: 0 0 350px;
-                                        height: 220px; 
+                                        display: flex;
+                                        background-image: url("../img/why-choose-us-image-one.jpg");
+                                        background-repeat: no-repeat;
+                                        background-size: cover;
+                                        background-position: center;
+                                        flex: 0 0 70%;
+                                        height: 220px;
                                     }
+                                }
+
+                                .row-two {
+                                    display: flex;
+                                    flex-direction: row;
+                                    justify-content: flex-end;
+                                    flex: 1 1 100%;
 
                                     .image-two {
-                                        flex: 0 0 350px;
-                                        height: 220px;                                            
+                                        display: flex;
+                                        background-image: url("../img/why-choose-us-image-two.jpg");
+                                        background-repeat: no-repeat;
+                                        background-size: cover;
+                                        background-position: center;
+                                        flex: 0 0 70%;
+                                        height: 220px;
                                     }
                                 }
                             }
@@ -801,14 +791,13 @@ body {
                                            
     
                             .why-choose-us__container {
-                                display: flex;
-                                flex-direction: column; 
-                                flex-wrap: wrap;  
-                                align-items: center;
+                                display: block;
                                 text-align: center;
+                                margin: 0 auto;
     
                                 .why-choose-us__container__text-container {
-                                    flex: 0 0 300px;
+                                    display: block;
+                                    max-width: 100%;
         
                                     .why-choose-us__container__text-container__headline {
                                         font-size: 36px;
@@ -849,61 +838,37 @@ body {
                                         }
                                     }
                                 }
-        
-                                // .why-choose-us__container__image-container {
-                                //     display: block;
-                                //     min-width: 540px;
-                                //     height: 450px;          
-                                    
-                                //     div {
-    
-                                //         .image-one {
-    
-                                //             img {
-                                //                 display: block;
-                                //                 position: relative;
-                                //                 left: 0;
-                                //                 top: 0;
-                                //                 height: 220px; 
-                                //             }
-                                                                 
-                                //         }
-        
-                                //         .image-two {
-    
-                                //             img {
-                                //                 display: block;
-                                //                 position: relative;
-                                //                 right: 0;
-                                //                 bottom: 0;
-                                //                 height: 220px; 
-                                //             }
-                                            
-                                //         }
-                                //     }                              
-                                 
-                                // }
     
                                 .why-choose-us__container__image-container {
-                                    display: flex;
-                                    flex-direction: column;
-                                    flex-wrap: wrap;
-                                    justify-content: center;
-                                    align-items: center;
-                                    min-width: 300px;
-                                    height: 450px;
+                                    display: block;
+                                    max-width: 100%;
+                                    
     
-                                    div {
+                                    .row-one {
+                                        display: block;                                        
     
                                         .image-one {
-                                            align-self: flex-start;
-                                            flex: 0 0 300px;
-                                            height: auto; 
+                                            background-image: url("../img/why-choose-us-image-one.jpg");
+                                            background-repeat: no-repeat;
+                                            background-size: cover;
+                                            background-position: center;
+                                            max-width: 350px;
+                                            height: 220px;
+                                            margin: 0 auto 10px auto;
                                         }
+                                    }
+    
+                                    .row-two {
+                                        display: block;
     
                                         .image-two {
-                                            flex: 0 0 300px;
-                                            height: auto;                                           
+                                            background-image: url("../img/why-choose-us-image-two.jpg");
+                                            background-repeat: no-repeat;
+                                            background-size: cover;
+                                            background-position: center;
+                                            max-width: 350px;
+                                            height: 220px;
+                                            margin: 0 auto;
                                         }
                                     }
                                 }

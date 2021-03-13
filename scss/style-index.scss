@@ -1,0 +1,1258 @@
+$color-field: #999999;
+$color-basic: #232323;
+$color-basic-light: #333333;
+$color-accent: #5474fd;
+
+
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+  
+*, *:before, *:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+  
+:focus, :active {
+    outline: none;
+}
+  
+a:focus, a:active {
+    outline: none;
+}
+  
+  nav, footer, header, aside {
+    display: block;
+}
+  
+html, body {
+    height: 100%;
+    width: 100%;
+    font-size: 100%;
+    line-height: 1;
+    font-size: 14px;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+  
+input, button, textarea {
+    font-family: inherit;
+}
+  
+input::-ms-clear {
+    display: none;
+}
+  
+button {
+    cursor: pointer;
+}
+  
+button::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+}
+  
+a, a:visited {
+    text-decoration: none;
+}
+  
+a:hover {
+    text-decoration: none;
+}
+  
+ul li {
+    list-style: none;
+}
+  
+h1, h2, h3, h4, h5, h6 {
+    font-size: inherit;
+    font-weight: 400;
+}
+
+// ------------------------------------------
+
+body {
+    font-family: 'Aleo', serif;
+
+    .wrapper {
+
+        .container {
+
+            header {
+
+                .first-screen {
+                    background-image: url("../img/first-screen.jpg");
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    background-position: center;
+                    min-height: 820px;
+
+                    .first-screen__content {
+                        max-width: 1110px;
+                        margin: 0 auto;
+                        text-align: center;
+                        padding: 230px 230px;
+
+                        .first-screen__logo {
+                            font-family: 'Josefin Sans', sans-serif;
+                            color: white;
+                            font-size: 48px;
+                            font-weight: 500;
+                            line-height: 26px;
+                            text-align: center;
+
+                            span {
+                                font-size: 22px;
+                                font-weight: 400;
+                                display: block;
+                                letter-spacing: 5px;
+                                margin-top: 10px;
+                            }
+                        }
+    
+                        .first-screen__search {
+                            padding: 2px;
+                            background-color: white;
+                            max-width: 650px;
+                            margin: 50px auto 120px auto;
+                            flex-direction: row;
+                            justify-content: space-between;
+
+                            form {       
+                                display: flex;                  
+                                                                
+                                input[type=search] {
+                                    flex: 0 0 75%;
+                                    color: $color-field;
+                                    font-size: 14px;
+                                    padding: 20px 30px;
+                                    letter-spacing: 1px;
+                                    font-family: 'Josefin Sans', sans-serif;
+                                    text-align: center;
+                                }
+
+                                input[type=submit] {
+                                    flex: 0 0 25%;
+                                    background-image:url('../img/loupe.png');
+                                    background-position-Y: 50%;
+                                    background-position-x: 90%;
+                                    background-repeat: no-repeat;
+                                    background-color: $color-accent;
+                                    color: white;
+                                    font-size: 14px;
+                                    padding: 23px 30px 20px 30px;
+                                    letter-spacing: 1px;
+                                }
+                            }
+    
+                        }
+    
+                        .first-screen__scroll-down {
+    
+                            .scroll-down__text {
+                                font-family: 'Josefin Sans', sans-serif;
+                                font-size: 14px;
+                                line-height: 26px;
+                                color: white;
+                                letter-spacing: 2px;
+                                font-weight: 400;
+                            }
+    
+                            .scroll-down__icon {
+
+                                svg {
+                                    width: 13px;
+                                    height: auto;
+                                }
+                                
+                            }
+                        }     
+                    }
+
+                                   
+                }
+
+                .menu {
+                    width: 100%;
+                    background-color: $color-accent;
+                    top: 0;
+                    left: 0;        
+                    z-index: 50;
+            
+                    &:before {
+                        content: '';
+                        position: absolute;
+                        top: 820px;
+                        left: 0;
+                        width: 100%;
+                        background-color: $color-accent;
+                        z-index: 3;
+                    }
+                    .header__container {
+                        max-width: 1110px;
+                        margin: 0 auto;
+                        padding: 0px 30px;
+            
+                        .container__body {
+                            display: flex;
+                            margin: 0 -50px;
+                            flex-direction: row;
+                            justify-content: space-between;
+                            align-items: center;
+                            height: 80px;
+                            position: relative;
+            
+                            .header__logo {
+    
+                                a {
+                                    position: relative;
+                                    z-index: 3;
+                                    font-size: 24px;
+                                    color: white;
+                                    font-family: 'Josefin Sans', sans-serif;
+                                    text-decoration: none;  
+                                    margin-left: 20px;
+                                }
+                                                         
+                            }
+            
+                            .header__burger {
+                                // display: none;                    
+                            }
+            
+                            .header__menu {
+            
+                                .header__list {
+                                    display: flex;
+                                    position: relative;
+                                    z-index: 3;
+                                    
+                                    li {
+                                        list-style: none;
+                                        margin: 0px 20px;                            
+            
+                                        .header__link {
+                                            color: #ffffff;
+                                            text-decoration: none;
+                                            text-transform: uppercase;
+                                            font-size: 14px;
+                                            font-weight: 400;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            main {
+
+                .why-choose-us {
+                    background-image: url("../img/why-choose-us.jpg");
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    background-position: center;
+                    
+
+                    .why-choose-us__content {                        
+                        max-width: 1110px;
+                        margin: 0 auto;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        padding: 0px;
+                        color: white;  
+                        min-height: 820px;                      
+
+                        .why-choose-us__container {
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            min-height: 500px;
+
+                            .why-choose-us__container__text-container {
+                                flex: 0 0 540px;
+    
+                                .why-choose-us__container__text-container__headline {
+                                    font-size: 36px;
+                                    line-height: 26px;
+                                    margin-bottom: 60px;
+                                }
+    
+                                .why-choose-us__container__text-container__paragraph {
+                                    font-size: 16px;
+                                    line-height: 26px;
+                                    font-weight: 300;
+                                    font-family: 'Josefin Sans', sans-serif;
+    
+                                    div {
+                                        margin-bottom: 35px;
+                                    }
+                                    div:last-child {
+                                        margin-bottom: 45px;
+                                    }
+                                }
+    
+                                .why-choose-us__container__text-container__button {
+    
+                                    a {
+                                        display: block;
+                                        max-width: 225px;
+                                        background-image: url("../img/button.jpg");
+                                        background-repeat: no-repeat;
+                                        background-size: cover;
+                                        background-position: center;
+                                        color: white;
+                                        font-size: 16px;
+                                        padding: 20px 0px;
+                                        letter-spacing: 1px;
+                                        text-align: center; 
+                                        text-transform: uppercase;                        
+                                    }
+                                }
+                            }
+    
+                            // .why-choose-us__container__image-container {
+                            //     display: block;
+                            //     min-width: 540px;
+                            //     height: 450px;          
+                                
+                            //     div {
+
+                            //         .image-one {
+
+                            //             img {
+                            //                 display: block;
+                            //                 position: relative;
+                            //                 left: 0;
+                            //                 top: 0;
+                            //                 height: 220px; 
+                            //             }
+                                                             
+                            //         }
+    
+                            //         .image-two {
+
+                            //             img {
+                            //                 display: block;
+                            //                 position: relative;
+                            //                 right: 0;
+                            //                 bottom: 0;
+                            //                 height: 220px; 
+                            //             }
+                                        
+                            //         }
+                            //     }                              
+                             
+                            // }
+
+                            .why-choose-us__container__image-container {
+                                display: flex;
+                                flex-direction: row;
+                                flex-wrap: wrap;
+                                justify-content: flex-end;
+                                align-items: center;
+                                min-width: 540px;
+                                height: 450px;
+
+                                div {
+
+                                    .image-one {
+                                        align-self: flex-start;
+                                        flex: 0 0 350px;
+                                        height: 220px; 
+                                    }
+
+                                    .image-two {
+                                        flex: 0 0 350px;
+                                        height: 220px;                                            
+                                    }
+                                }
+                            }
+                        }                        
+                    }
+                }
+
+                .how-it-works {
+                    background-color: $color-basic-light;
+
+                    .how-it-works__content {
+                        max-width: 1110px;
+                        margin: 0 auto;
+                        padding: 100px 0px;
+                        display: flex;
+                        flex-direction: row;
+                        flex-wrap: wrap;
+                        justify-content: space-between;
+
+                        .how-it-works__content__block {
+                            flex: 0 0 33%;
+                            text-align: center;
+
+                            .block__icon {
+
+                                svg {
+                                    width: auto;
+                                    height: 60px;
+                                }
+
+                            }
+
+                            .block__description {
+                                font-size: 36px;
+                                line-height: 26px;
+                                color: white;
+                                margin-top: 30px;
+                            }
+                        }
+                    }
+                }
+
+                .grand-spain-block-one {
+                    background-image: url("../img/grand-spain-block-one.jpg");
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    background-position: center;
+
+                    .grand-spain-block-one__content {
+                        max-width: 1110px;
+                        margin: 0 auto;
+                        display: flex;
+                        justify-content: flex-start;
+                        min-height: 700px;
+                        padding: 100px 0px;
+
+                        .grand-spain-block-one__content__block {
+                            color: white;
+                            background-color: rgba(35, 35, 35, .9);
+                            max-width: 540px;
+                            padding: 50px 30px;
+                            font-family: 'Josefin Sans', sans-serif;
+                            align-self: flex-end;
+
+                            .block__text {
+                                font-size: 20px;
+                                line-height: 26px;
+                                font-weight: 300;
+                            }
+
+                            .block__headline {
+                                font-size: 20px;
+                                line-height: 26px;
+                                font-weight: 300;
+                                text-transform: uppercase;
+                                margin: 30px 0px;
+                            }
+
+                            .block__description {
+                                font-size: 16px;
+                                line-height: 26px;
+                                font-weight: 300;
+                                margin-bottom: 40px;
+                            }
+
+                            .block__button {
+
+                                a {
+                                    display: block;
+                                    max-width: 225px;
+                                    background-image: url("../img/button.jpg");
+                                    background-repeat: no-repeat;
+                                    background-size: cover;
+                                    background-position: center;
+                                    color: white;
+                                    font-size: 16px;
+                                    padding: 20px 0px;
+                                    letter-spacing: 1px;
+                                    text-align: center; 
+                                    text-transform: uppercase;  
+                                    font-family: 'Aleo', serif;
+                                }
+                            }
+                        }
+                    }
+                }
+                
+                .grand-spain-block-two {
+                    background-image: url("../img/grand-spain-block-two.jpg");
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    background-position: center;
+
+                    .grand-spain-block-two__content {
+                        max-width: 1110px;
+                        margin: 0 auto;
+                        display: flex;
+                        justify-content: flex-end;
+                        min-height: 700px;
+                        padding: 100px 0px;
+
+                        .grand-spain-block-two__content__block {
+                            color: white;
+                            background-color: rgba(35, 35, 35, .9);
+                            max-width: 540px;
+                            padding: 50px 30px;
+                            font-family: 'Josefin Sans', sans-serif;
+                            align-self: flex-end;
+
+                            .block__text {
+                                font-size: 20px;
+                                line-height: 26px;
+                                font-weight: 300;
+                            }
+
+                            .block__headline {
+                                font-size: 20px;
+                                line-height: 26px;
+                                font-weight: 300;
+                                text-transform: uppercase;
+                                margin: 30px 0px;
+                            }
+
+                            .block__description {
+                                font-size: 16px;
+                                line-height: 26px;
+                                font-weight: 300;
+                                margin-bottom: 40px;
+                            }
+
+                            .block__button {
+
+                                a {
+                                    display: block;
+                                    max-width: 225px;
+                                    background-image: url("../img/button.jpg");
+                                    background-repeat: no-repeat;
+                                    background-size: cover;
+                                    background-position: center;
+                                    color: white;
+                                    font-size: 16px;
+                                    padding: 20px 0px;
+                                    letter-spacing: 1px;
+                                    text-align: center; 
+                                    text-transform: uppercase;  
+                                    font-family: 'Aleo', serif;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .testimonial {
+                    background-image: url("../img/testimonial.jpg");
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    background-position: center;
+                    color: white;
+                    
+
+                    .testimonial__content {
+                        max-width: 1110px;
+                        margin: 0 auto;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        min-height: 730px;
+
+                        .testimonial__headline {
+                            font-size: 36px;
+                            line-height: 26px;
+                            font-weight: 500;
+                            text-align: center;
+                            margin-bottom: 100px;
+                        }
+
+                        .testimonial__container {
+                            display: flex;
+                            align-self: center;
+                            min-height: 300px;
+
+                            .testimonial__content__block {
+                                display: flex;
+                                flex-direction: row;
+                                background-color: $color-basic-light;
+                                font-family: 'Josefin Sans', sans-serif;                                
+        
+                                .testimonial__content__image {
+                                    background-image: url("../img/testimonial__content__image.jpg");
+                                    background-repeat: no-repeat;
+                                    background-size: cover;
+                                    background-position: center;
+                                    flex: 0 0 40%;
+                                }
+        
+                                .testimonial__content__text {
+                                    padding: 50px 60px;
+                                    flex: 0 0 60%;
+        
+                                    .block__headline {
+                                        text-transform: uppercase;  
+                                        font-size: 20px;
+                                        line-height: 26px;
+                                        font-weight: 300;
+                                        margin-bottom: 30px;
+                                    }
+        
+                                    .block__description {
+                                        font-size: 16px;
+                                        line-height: 26px;
+                                        font-weight: 300;
+    
+                                        i {
+                                            color: $color-accent;
+                                            font-size: 20px;
+                                            display: block;
+                                            float: left;
+                                            margin-right: 10px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        
+                    }                   
+
+                }
+            }
+
+            footer {
+                background-color: $color-basic;
+
+                .footer-container {                    
+                    max-width: 1110px;
+                    margin: 0 auto;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    min-height: 268px;
+
+                    .footer-container__block {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: flex-end;
+
+                        .footer-container__logo {
+                            font-family: 'Josefin Sans', sans-serif;
+                            color: white;
+                            font-size: 24px;
+                            font-weight: 500;
+                            line-height: 26px;
+                            text-align: center;
+                            margin-bottom: 30px;
+    
+                            span {
+                                font-size: 16px;
+                                font-weight: 400;
+                                display: block;
+                            }
+                        }
+    
+                        .footer-container__social-icons {
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: center;
+                            align-items: center;
+                            gap: 20px;
+                            margin-bottom: 50px;
+    
+                            a {
+
+                                svg {
+                                    width: auto;
+                                    height: 16px;
+                                }                           
+                            }
+                        }
+    
+                    }
+
+                    
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 767px) {
+
+    body {
+        &.lock {
+            overflow: hidden;
+        }
+
+        .wrapper {
+
+            .container {
+    
+                header {
+
+                    .first-screen {
+                        min-height: 400px;
+            
+                        .first-screen__content {
+                            max-width: 1110px;
+                            margin: 0 auto;
+                            text-align: center;
+                            padding: 70px 20px;
+
+                            .first-screen__logo {
+                                font-family: 'Josefin Sans', sans-serif;
+                                color: white;
+                                font-size: 48px;
+                                font-weight: 500;
+                                line-height: 26px;
+                                text-align: center;
+    
+                                span {
+                                    font-size: 22px;
+                                    font-weight: 400;
+                                    display: block;
+                                    letter-spacing: 5px;
+                                    margin-top: 10px;
+                                }
+                            }
+        
+                            .first-screen__search {
+                                padding: 2px;
+                                background-color: white;
+                                max-width: 300px;
+                                margin: 50px auto 60px auto;
+                                flex-direction: row;
+                                justify-content: space-between;
+    
+                                form {       
+                                    display: flex;
+                                    flex-wrap: wrap;                  
+                                                                    
+                                    input[type=search] {
+                                        flex: 0 0 100%;
+                                        color: $color-field;
+                                        font-size: 14px;
+                                        padding: 20px 30px;
+                                        letter-spacing: 1px;
+                                        font-family: 'Josefin Sans', sans-serif;
+                                        text-align: center;
+                                    }
+    
+                                    input[type=submit] {
+                                        flex: 0 0 100%;
+                                        background-image:url('../img/loupe.png');
+                                        background-position-Y: 50%;
+                                        background-position-x: 90%;
+                                        background-repeat: no-repeat;
+                                        background-color: $color-accent;
+                                        color: white;
+                                        font-size: 14px;
+                                        padding: 23px 30px 20px 30px;
+                                        letter-spacing: 1px;
+                                    }
+                                }
+        
+                            }
+        
+                            .first-screen__scroll-down {
+        
+                                .scroll-down__text {
+                                    font-family: 'Josefin Sans', sans-serif;
+                                    font-size: 14px;
+                                    line-height: 26px;
+                                    color: white;
+                                    letter-spacing: 2px;
+                                    font-weight: 400;
+                                }
+        
+                                .scroll-down__icon {
+    
+                                    svg {
+                                        width: 13px;
+                                        height: auto;
+                                    }
+                                    
+                                }
+                            }     
+                        }
+                    }
+                }
+                main {
+
+                    .why-choose-us {
+                        
+    
+                        .why-choose-us__content {   
+                            padding: 60px 20px;
+                            min-height: 420px; 
+                                           
+    
+                            .why-choose-us__container {
+                                display: flex;
+                                flex-direction: column; 
+                                flex-wrap: wrap;  
+                                align-items: center;
+                                text-align: center;
+    
+                                .why-choose-us__container__text-container {
+                                    flex: 0 0 300px;
+        
+                                    .why-choose-us__container__text-container__headline {
+                                        font-size: 36px;
+                                        line-height: 26px;
+                                        margin-bottom: 50px;
+                                    }
+        
+                                    .why-choose-us__container__text-container__paragraph {
+                                        font-size: 16px;
+                                        line-height: 26px;
+                                        font-weight: 300;
+                                        font-family: 'Josefin Sans', sans-serif;
+        
+                                        div {
+                                            margin-bottom: 35px;
+                                        }
+                                        div:last-child {
+                                            margin-bottom: 45px;
+                                        }
+                                    }
+        
+                                    .why-choose-us__container__text-container__button {
+        
+                                        a {
+                                            display: block;
+                                            margin: 0px auto 60px auto;
+                                            max-width: 225px;
+                                            background-image: url("../img/button.jpg");
+                                            background-repeat: no-repeat;
+                                            background-size: cover;
+                                            background-position: center;
+                                            color: white;
+                                            font-size: 16px;
+                                            padding: 20px 0px;
+                                            letter-spacing: 1px;
+                                            text-align: center; 
+                                            text-transform: uppercase;                        
+                                        }
+                                    }
+                                }
+        
+                                // .why-choose-us__container__image-container {
+                                //     display: block;
+                                //     min-width: 540px;
+                                //     height: 450px;          
+                                    
+                                //     div {
+    
+                                //         .image-one {
+    
+                                //             img {
+                                //                 display: block;
+                                //                 position: relative;
+                                //                 left: 0;
+                                //                 top: 0;
+                                //                 height: 220px; 
+                                //             }
+                                                                 
+                                //         }
+        
+                                //         .image-two {
+    
+                                //             img {
+                                //                 display: block;
+                                //                 position: relative;
+                                //                 right: 0;
+                                //                 bottom: 0;
+                                //                 height: 220px; 
+                                //             }
+                                            
+                                //         }
+                                //     }                              
+                                 
+                                // }
+    
+                                .why-choose-us__container__image-container {
+                                    display: flex;
+                                    flex-direction: column;
+                                    flex-wrap: wrap;
+                                    justify-content: center;
+                                    align-items: center;
+                                    min-width: 300px;
+                                    height: 450px;
+    
+                                    div {
+    
+                                        .image-one {
+                                            align-self: flex-start;
+                                            flex: 0 0 300px;
+                                            height: auto; 
+                                        }
+    
+                                        .image-two {
+                                            flex: 0 0 300px;
+                                            height: auto;                                           
+                                        }
+                                    }
+                                }
+                            }                        
+                        }
+                    }
+    
+                    .how-it-works {
+                        background-color: $color-basic-light;
+    
+                        .how-it-works__content {
+                            max-width: 1110px;
+                            margin: 0 auto;
+                            padding: 60px 0px 20px 0px;
+                            display: flex;
+                            flex-direction: column;
+                            flex-wrap: wrap;
+                            justify-content: space-between;
+    
+                            .how-it-works__content__block {
+                                flex: 0 0 33%;
+                                text-align: center;
+                                margin-bottom: 40px;
+    
+                                .block__icon {
+    
+                                    svg {
+                                        width: auto;
+                                        height: 60px;
+                                    }
+    
+                                }
+    
+                                .block__description {
+                                    font-size: 36px;
+                                    line-height: 26px;
+                                    color: white;
+                                    margin-top: 30px;
+                                }
+                            }
+                        }
+                    }
+    
+                    .grand-spain-block-one {
+                        background-image: url("../img/grand-spain-block-one.jpg");
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                        background-position: center;
+    
+                        .grand-spain-block-one__content {
+                            max-width: 1110px;
+                            margin: 0 auto;
+                            display: flex;
+                            justify-content: flex-start;
+                            min-height: 400px;
+                            padding: 60px 20px;
+    
+                            .grand-spain-block-one__content__block {
+                                max-width: 540px;
+                                padding: 50px 30px;
+                                font-family: 'Josefin Sans', sans-serif;
+                                align-self: flex-end;
+                                text-align: center;
+    
+                                .block__text {
+                                    font-size: 20px;
+                                    line-height: 26px;
+                                    font-weight: 300;
+                                }
+    
+                                .block__headline {
+                                    margin: 30px 0px;
+                                }
+    
+                                .block__description {
+                                    margin-bottom: 40px;
+                                }
+    
+                                .block__button {
+    
+                                    a {
+                                        margin: 0 auto;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    
+                    .grand-spain-block-two {
+                        background-image: url("../img/grand-spain-block-two.jpg");
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                        background-position: center;
+    
+                        .grand-spain-block-two__content {
+                            max-width: 1110px;
+                            margin: 0 auto;
+                            display: flex;
+                            justify-content: flex-end;
+                            min-height: 400px;
+                            padding: 60px 20px;
+    
+                            .grand-spain-block-two__content__block {
+                                max-width: 540px;
+                                padding: 50px 30px;
+                                font-family: 'Josefin Sans', sans-serif;
+                                align-self: flex-end;
+                                text-align: center;
+    
+                                .block__text {
+                                }
+    
+                                .block__headline {
+                                    margin: 30px 0px;
+                                }
+    
+                                .block__description {
+                                    margin-bottom: 40px;
+                                }
+    
+                                .block__button {
+    
+                                    a {
+                                        margin: 0 auto;
+                                    }
+                                }
+                            }
+                        }
+                    }
+    
+                    .testimonial {
+                        background-image: url("../img/testimonial.jpg");
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                        background-position: center;
+                        color: white;
+                        
+    
+                        .testimonial__content {
+                            margin: 0 auto;
+                            padding: 60px 20px;
+                            min-height: 400px;
+    
+                            .testimonial__headline {
+                                font-size: 36px;
+                                line-height: 26px;
+                                font-weight: 500;
+                                text-align: center;
+                                margin-bottom: 60px;
+                            }
+    
+                            .testimonial__container {
+                                min-height: auto;
+    
+                                .testimonial__content__block {
+                                    display: flex;
+                                    flex-wrap: wrap;
+                                    flex-direction: row;
+
+            
+                                    .testimonial__content__image {
+                                        background-image: url("../img/testimonial__content__image.jpg");
+                                        background-repeat: no-repeat;
+                                        background-size: cover;
+                                        background-position: center;
+                                        flex: 1 1 100%;
+                                        min-height: 284px;
+                                    }
+            
+                                    .testimonial__content__text {
+                                        flex: 1 1 100%;
+            
+                                        .block__headline {
+                                        }
+            
+                                        .block__description {
+        
+                                            i {
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            
+                        }                   
+    
+                    }
+                }
+    
+                footer {
+                    background-color: $color-basic;
+    
+                    .footer-container {                    
+                        max-width: 1110px;
+                        margin: 0 auto;
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: center;
+                        min-height: 268px;
+    
+                        .footer-container__block {
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: flex-end;
+    
+                            .footer-container__logo {
+                                font-family: 'Josefin Sans', sans-serif;
+                                color: white;
+                                font-size: 24px;
+                                font-weight: 500;
+                                line-height: 26px;
+                                text-align: center;
+                                margin-bottom: 30px;
+        
+                                span {
+                                    font-size: 16px;
+                                    font-weight: 400;
+                                    display: block;
+                                }
+                            }
+        
+                            .footer-container__social-icons {
+                                display: flex;
+                                flex-direction: row;
+                                justify-content: center;
+                                align-items: center;
+                                gap: 20px;
+                                margin-bottom: 50px;
+        
+                                a {
+    
+                                    svg {
+                                        width: auto;
+                                        height: 16px;
+                                    }                           
+                                }
+                            }
+        
+                        }
+    
+                        
+                    }
+                }
+            }
+        }
+
+        
+
+
+        
+        .menu {
+
+            .header__container {
+                padding: 0px 15px !important;
+    
+                .container__body {
+                    height: 60px !important;
+                    margin: 0px;
+                    margin: 0px !important;
+
+                    .header__logo {
+    
+                        a {
+                            margin-left: 0px !important;
+                        }
+                                                 
+                    }
+            
+                    .header__burger {
+                        display: block;
+                        position: relative;
+                        width: 40px;
+                        height: 30px;
+                        z-index: 3;                    
+                
+                        span {
+                            position: absolute;
+                            background-color: white;
+                            left: 0;
+                            width: 100%;
+                            height: 2px;
+                            top: 14px;
+                            transition: all 0.3s ease;
+                        }
+                
+                        &:before, &:after {
+                            content: '';
+                            background-color: white;
+                            position: absolute;
+                            width: 100%;
+                            height: 2px;
+                            left: 0;
+                            transition: all 0.3s ease;
+                        }
+                
+                        &:before {
+                            top: 0;
+                        }
+                
+                        &:after {
+                            bottom: 0;
+                        }                    
+                    }
+    
+                    .header__burger.active span {
+                        transform: scale(0);
+                    }
+                    .header__burger.active:before {
+                        transform: rotate(45deg);
+                        top: 14px;
+                    }
+                    .header__burger.active:after {
+                        transform: rotate(-45deg);                    
+                        bottom: 14px;
+                    }
+                
+                    .header__menu {
+                        position: fixed;
+                        top: -100%;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        background-color: #0c2749;
+                        padding: 75px 15px 0px 15px;
+                        transition: all 0.3s ease;
+    
+                        .header__list {
+                            flex-direction: column;
+                            justify-content: flex-start;
+                            align-items: flex-start;
+    
+                            li {
+                                padding: 11px 0px;
+                                margin: 0px !important;
+    
+                                .header__link {
+                                }
+                            }
+                        }
+                    }
+    
+                    .header__menu.active {
+                        top: 0;
+                    }
+                }
+    
+            }
+        }
+        
+        
+    }
+}

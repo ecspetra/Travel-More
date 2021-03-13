@@ -81,7 +81,7 @@ body .wrapper .container header .first-screen .first-screen__content {
   max-width: 1110px;
   margin: 0 auto;
   text-align: center;
-  padding: 230px 230px;
+  padding: 230px 0px;
 }
 body .wrapper .container header .first-screen .first-screen__content .first-screen__logo {
   font-family: "Josefin Sans", sans-serif;
@@ -101,6 +101,7 @@ body .wrapper .container header .first-screen .first-screen__content .first-scre
 body .wrapper .container header .first-screen .first-screen__content .first-screen__search {
   padding: 2px;
   background-color: white;
+  min-width: 450px;
   max-width: 650px;
   margin: 50px auto 120px auto;
   flex-direction: row;
@@ -570,6 +571,7 @@ body .wrapper .container footer .footer-container .footer-container__block .foot
   body .wrapper .container header .first-screen .first-screen__content .first-screen__search {
     padding: 2px;
     background-color: white;
+    min-width: 280px;
     max-width: 300px;
     margin: 50px auto 60px auto;
     flex-direction: row;

@@ -182,7 +182,8 @@ body .wrapper .container header .menu .header__container .container__body .heade
   color: white;
   font-family: "Josefin Sans", sans-serif;
   text-decoration: none;
-  margin-left: 20px;
+  margin: 5px 0px 0px 20px;
+  display: block;
 }
 body .wrapper .container header .menu .header__container .container__body .header__menu .header__list {
   display: flex;
